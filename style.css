@@ -988,7 +988,13 @@ h2 {
   font-family: "Segoe UI", sans-serif;
   color: #222;
 }
-
+.product-title{
+  color: #FF6B1A;
+  font-size: 4.4rem;
+  font-weight: 700;
+  margin: 1rem;
+  
+}
 .category-nav {
   display: flex;
   gap: 18px;
