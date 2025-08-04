@@ -7,8 +7,9 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
   <!-- AOS Animation CSS -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.8/dist/lenis.css">
+
 </head>
 
 
@@ -23,14 +24,40 @@
       <span></span>
       <span></span>
     </button>
-    <nav class="modern-nav-group">
-      <a href="#" class="modern-nav-link active">Home</a>
-      <a href="#about" class="modern-nav-link">About</a>
-       <a href="#" class="modern-nav-link">product</a>
-      <a href="#" class="modern-nav-link">Service</a>
-      <a href="#" class="modern-nav-link">Work</a>
-
-    </nav>
+   <nav class="modern-nav-group">
+  <a href="#" class="modern-nav-link active">Home</a>
+  <a href="#about" class="modern-nav-link">About</a>
+  <div class="nav-hover-group">
+    <a href="#product-catagory-section" class="modern-nav-link">Product ></a>
+    <div class="nav-hover-preview">
+      <strong>Featured Products</strong>
+      <ul>
+        <li><a href="/product-catgories/Frying-Grilling.html">Frying & Grilling</a></li>
+        <li><a href="/product-catgories/ice-cold.html">Ice & Cold Preparations</a>  </li>
+        <li><a href="/product-catgories/Baking-roasting.html">Baking & Roasting</a> </li>
+        <li><a href="/product-catgories/eating-cooking.html">Cooking & Eating</a> </li>
+        <li><a href="/product-catgories/Juise-Blending.html">Juice & Blending</a> </li>
+        <li><a href="/product-catgories/Beavarge-Speacial.html">Beavarage & Speacial</a> </li>
+      </ul>
+    </div>
+  </div>
+  <div class="nav-hover-group">
+    <a href="#services" class="modern-nav-link">Service ></a>
+    <div class="nav-hover-preview">
+      <strong>Our Services</strong>
+      <ul>
+        <li>Kitchen Appliances</li>
+        <li>Modular Setup</li>
+        <li>Sink & Plumbing</li>
+        <li>Custom Finishing</li>
+        <li>Appliance Integration</li>
+        <li>Post-install Support</li>
+      </ul>
+    </div>
+  </div>
+  <a href="#process" class="modern-nav-link">Process</a>
+  <a href="#work" class="modern-nav-link">Work</a>
+</nav>
     <div class="modern-actions">
       <a href="#" class="modern-signup-btn">Enquiry</a>
       <a href="#footer" class="modern-signup-btn">Contact</a>
@@ -42,14 +69,14 @@
 <main>
   <section class="hero">
     <div class="hero-bg">
-      <img src="img/hero/img-2.jpg" alt="Ice Cream Machine" class="hero-img-left">
-      <img src="img/hero/pngtree-metal-fryer-with-fries-inside-in-front-of-it-image_2564585.jpg" alt="Oven" class="hero-img-right">
+      <img src="img/hero/360_F_627853212_bIw6wBo8qXXZvrj7wVXNew9fovoVSEoJ.jpg" alt="Ice Cream Machine" class="hero-img-left">
+      <img src="img/hero/img-4.webp" alt="Oven" class="hero-img-right">
       <div class="hero-overlay"></div>
     </div>
       <div class="hero-alt-content">
         <h1>Discover the Best Kitchen Tools</h1>
         <p>Upgrade your kitchen with our premium appliances and gadgets, designed for chefs and home cooks alike.</p>
-        <a href="#" class="hero-alt-btn">Shop Now</a>
+        <a href="#product-catagory-section" class="hero-alt-btn">Shop Now</a>
        </div>
   </section>
      <div class="hero-footer">
@@ -135,25 +162,39 @@
  <section class="product-section" id="product-catagory-section"> 
   <h2 class="tiltle">Product catogory</h2>
   <div class=" container">
-     <a href="/product-catgories/cooking-heating.html" class="box wedding">
-      <h2>Cooking & Heating</h2>
-      <p>From gas ranges to induction cooktops and deep fryers, our industrial-grade cooking equipment ensures durability, safety, and precision for high-volume kitchens.</p>
+     <a href="/product-catgories/Frying-Grilling.html" class="box wedding">
+      <h2>Frying & Grilling </h2>
+      <p><span>For crispy, golden textures and smoky flavors.</span></BR> 
+        Designed for fast and even cooking, this set includes air fryers, grills, deep fryers, and tandoors—ideal for commercial kitchens and quick-serve setups. From toasters to sandwich makers, deliver hot, tasty bites efficiently.</p>
     </a>
-    <div class="box convocations">
-      <h2>Refrigeration Systemss</h2>
-      <p>Showcase your college brand on every photo & get brand virality on social media like never before.</p>
-    </div>
-    <div class="box sports">
-      <h2>Countertop Appliances</h2>
-      <p>Our highly accurate Face Recognition delivers each participant “their” own photos in seconds.</p>
-    </div>
+    <a href="/product-catgories/ice-cold.html" class="box convocations">
+      <h2>Ice & Cold Preparations</h2>
+      <p>For frozen treats and chilling convenience.
+Perfect for dessert stations and cafes, this range includes equipment like ice cream makers, ice crushers, and yogurt makers, ensuring quick and hygienic cold preparation.</p>
+    </a>
+    <a href="/product-catgories/Baking-roasting.html" class="box sports">
+      <h2>Baking & Roasting</h2>
+      <p>For cakes, breads, pizzas, and perfectly roasted dishes.
+Includes OTGs, convection ovens, and built-in ovens that offer precision temperature control.</p>
+    </a>
     <div class="box tagline">
       <h2><span>Dee kitchen</span><br>Making Waves Everywhere !</h2>
     </div>
-    <div class="box parties">
-      <h2>Customized Fabrication</h2>
-      <p>Guests view only their photos for a personalized and private event experience.</p>
-    </div>
+    <a href="/product-catgories/eating-cooking.html" class="box parties">
+      <h2>Cooking & Eating</h2>
+      <p><BR>Reliable essentials for daily meal prep.</BR>Reliable essentials for daily meal prep.
+Core kitchen tools like induction cooktops, gas hobs, multi-cookers, and electric kettles make everyday cooking effortless. Whether slow cooking or boiling quickly, this category covers all heat-based kitchen activities.</p>
+    </a>
+    <a href="/product-catgories/Juise-Blending.html" class="box parties">
+      <h2>Juice & blending</h2>
+      <p>Fuel health and flavor with every blend.
+This category includes everything from cold press juicers to hand blenders, mixer grinders, and smoothie makers. Ideal for homes and juice bars looking for consistency, speed, and nutrient-rich drinks.</p>
+    </a>
+    <a href="/product-catgories/Beavarge-Speacial.html" class="box parties">
+      <h2>Beavarage & Speacial use</h2>
+      <p>Curated for beverages and specialty prep.
+From coffee machines to milk frothers, this range covers niche appliances tailored for cafes, offices, and modern homes. Includes tea brewers, hot & cold water dispensers, and water purifiers for every hydration need.</p>
+    </a>
   </div>
  </section>
 <!-- end of prduct -->
@@ -161,7 +202,7 @@
 <!-- end of product category -->
 
 
-<section class="service-hero">
+<section class="service-hero" id="services">
   <div class="service-hero-content">
     <h2>We provide <br><span>Best Quality</span></h2>
     <h1 class="bg-text">Services</h1>
@@ -218,12 +259,12 @@
         </div>
         <div class="expert-box">
           <img src="img/expertice/bar-concept.jpg" alt="Design">
-          <h4>Design & Fabrication</h4>
-          <p>Modern aesthetics with functional materials.</p>
+          <h4>Custom Kitchen Engineering</h4>
+          <p>Tailored solutions engineered for durability and precision.</p>
         </div>
         <div class="expert-box">
           <img src="img/expertice/empty_kitchen_wide_1.jpg" alt="Execution">
-          <h4>Installation</h4>
+          <h4>Delivery Product</h4>
           <p>On-time execution with precision craftsmanship.</p>
         </div>
       </div>
@@ -231,7 +272,7 @@
   </section>
  
   <!-- serivce -->
-   <section class="process-section">
+   <section class="process-section" id="process">
   <div class="process-container">
     <h5 class="sub-heading">How We Work</h5>
     <h2 class="main-heading">Here's how we work</h2>
@@ -267,7 +308,7 @@
       <div class="timeline-block-left">
         <div class="timeline-content">
           <span class="step-number">03.</span>
-          <h3>Installation & Setup</h3>
+          <h3>Installation Guid & Setup</h3>
           <p>Our experts deliver, install, and test each appliance to ensure optimal performance and safety.</p>
         </div>
          <div class="timeline-img">
@@ -279,7 +320,7 @@
        
         <div class="timeline-content">
           <span class="step-number">04.</span>
-          <h3>Handover & Support</h3>
+          <h3>Delivery & Support</h3>
           <p>You receive warranty info, usage guidance, and lifetime technical support from our service team.</p>
         </div>
          <div class="timeline-img">
@@ -296,7 +337,7 @@
   <div class="work-info-row">
     <div class="work-info-left">
       <div class="work-info-img">
-        <img src="img/work/front-view-professional-kitchen.jpg" alt="Work Illustration">
+        <img src="img/hero/backside-chef-cooking-modern-restaurant-kitchen-backside-chef-cooking-modern-restaurant-kitchen-279366945.webp" alt="Work Illustration">
       </div>
       <p class="work-info-desc">
         “From local cafés to large-scale hotel chains“
@@ -304,7 +345,7 @@
     </div>
     <div class="work-info-right">
       <div class="work-info-img">
-        <img src="img/work/professional-stainless-steel-kitchen-design-photo-was-made-restouraunt.jpg" alt="Work Illustration">
+        <img src="img/hero/360_F_615833723_oxTiOadYkYUwQLCbEbtAOzwsipEaj5X2.jpg" alt="Work Illustration">
       </div>
       <p class="work-info-desc">
         “ our commercial kitchen solutions have helped food businesses streamline operations “
@@ -312,7 +353,7 @@
     </div>
     <div class="work-info-left">
       <div class="work-info-img">
-        <img src="img/work/shiny-steel-stove-heats-fresh-food-inside-generated-by-ai.jpg" alt="Work Illustration">
+        <img src="img/hero/backside-chef-cooking-modern-restaurant-kitchen-backside-chef-cooking-modern-restaurant-kitchen-279367841.webp" alt="Work Illustration">
       </div>
       <p class="work-info-desc">
          “ boost productivity, and serve with confidence “
@@ -320,7 +361,7 @@
     </div>
     <div class="work-info-right">
       <div class="work-info-img">
-        <img src="img/work/Restaurant-Commercial-Kitchen-Equipment-List-A-Comprehensive-Guide.png" alt="Work Illustration">
+        <img src="img/work/chef-restaurant-kitchen-stove-with-pan-doing-flambe-food_73899-6567.avif" alt="Work Illustration">
       </div>
       <p class="work-info-desc">
         “ Our team delivers not just equipment, but complete support — from planning and supply to installation and service.”
@@ -352,28 +393,28 @@
   <div class="work-testimonials">
     <div class="work-testimonial-list">
       <div class="work-testimonial-person">
-        <img src="" alt="AR-SHAKIR">
+        <img src="https://ui-avatars.com/api/?name=Arjun+Menon&background=FF6B1A&color=fff&size=64" alt="AR-SHAKIR">
         <div>
           <div class="work-testimonial-name"> Arjun Menon</div>
           <div class="work-testimonial-role"> Chef, Coastal Spice Group</div>
         </div>
       </div>
       <div class="work-testimonial-person">
-        <img src="" alt="Kathryn Murphy">
+        <img src="https://ui-avatars.com/api/?name=Sneha+Rao&background=2D9CDB&color=fff&size=64" alt="Kathryn Murphy">
         <div>
           <div class="work-testimonial-name"> Sneha Rao</div>
           <div class="work-testimonial-role">Owner, Rao Bakers & Confectionery</div>
         </div>
       </div>
       <div class="work-testimonial-person">
-        <img src="" alt="Jacob Jones">
+        <img src="https://ui-avatars.com/api/?name=Rajat+Kapoor&background=FF6B1A&color=fff&size=64" alt="Jacob Jones">
         <div>
           <div class="work-testimonial-name">Rajat Kapoor</div>
           <div class="work-testimonial-role">Hotel Manager, Urban Stay Inns</div>
         </div>
       </div>
       <div class="work-testimonial-person">
-        <img src="" alt="Bessie Cooper">
+        <img src="https://ui-avatars.com/api/?name=Bessie+Cooper&background=2D9CDB&color=fff&size=64" alt="Bessie Cooper">
         <div>
           <div class="work-testimonial-name">Bessie Cooper</div>
           <div class="work-testimonial-role"></div>
@@ -382,9 +423,9 @@
     </div>
     <div class="work-testimonial-main">
       <div class="work-testimonial-person">
-        <img src="" alt="AR-SHAKIR">
+        <img src="https://ui-avatars.com/api/?name=Arjun+Menon&background=FF6B1A&color=fff&size=64" alt="AR-SHAKIR">
         <div>
-          <div class="work-testimonial-name">AR-SHAKIR</div>
+          <div class="work-testimonial-name">Arjun-Menon</div>
           <div class="work-testimonial-role">Executive Chef, Coastal Spice Group</div>
         </div>
       </div>
@@ -417,7 +458,7 @@
       </div>
       <div class="footer-column">
         <h3>Location</h3>
-        <p>No.12, Anna Nagar, Chennai<br>Tamil Nadu - 600040</p>
+        <p>No.12, Anna Nagar, Salem<br>Tamil Nadu - 600040</p>
       </div>
       <div class="footer-column">
         <h3>Contact Us</h3>
@@ -437,8 +478,35 @@
 </footer>
 
 <!-- Footer End -->
-<script src="/main.js">
-</script>
+<script src="/main.js"></script>
+<script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script> 
+<script>// Initialize Lenis
+const lenis = new Lenis({
+  duration: 1.2,
+  smooth: true
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf); 
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const targetId = this.getAttribute('href');
+    if (targetId.length > 1 && document.querySelector(targetId)) {
+      e.preventDefault();
+      lenis.scrollTo(targetId, { offset: 0, duration: 1.2, smooth: true });
+    }
+  });
+});</script>
+
 
 
 </body>

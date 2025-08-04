@@ -4,18 +4,81 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
-  
-
-}
+  background-image: url(img/hero/img\ bg.png);
+  }
 
 /* NAVBAR */
 /* Modern Navbar Styles */
+.nav-hover-group {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-hover-preview {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 110%;
+  min-width: 220px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(45,156,219,0.10);
+  padding: 1rem 1.2rem;
+  z-index: 999;
+  font-size: 1rem;
+  color: #222;
+  animation: fadeIn 0.18s;
+}
+
+.nav-hover-group:hover .nav-hover-preview,
+.nav-hover-group:focus-within .nav-hover-preview {
+  display: block;
+}
+
+.nav-hover-preview strong {
+  color: #FF6B1A;
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.nav-hover-preview ul {
+  list-style: none;
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+}
+
+.nav-hover-preview li {
+  padding: 0.2rem 0;
+  color: #2D9CDB;
+  font-weight: 500;
+  font-size: 0.98rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: none;}
+}
+.modern-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;  
+  width: 100%;
+  z-index: 1000;
+  background: #fff; /* Or your navbar background color */
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+body {
+  padding-top: 93px; /* Adjust to your navbar height */
+}
 .modern-navbar {
   background: linear-gradient(90deg, #fafafa 50% ,#FF6B1A 50%);
   border-radius: 28px;
   width: 100%;
-  max-width: 1400px;
-  margin: 1rem auto;
+  max-width: 1450px;
+  margin: 0.5rem auto;
   padding: 10px 10px;
   display: flex;
   align-items: center;
@@ -123,7 +186,7 @@ body {
   background: #232323;
   border-radius: 2px;
   margin: 4px 0;
-  transition: 0.3s;
+  transition: 0.7s;
 }
 .nav-toggle.open span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
@@ -190,7 +253,7 @@ body {
   color: #181818;
   padding: 2rem;
   border-radius: 6px;
-  transition: transform 0.3s ease;
+  transition: transform 1.3s ease;
 }
 
 .card:hover {
@@ -236,6 +299,11 @@ body {
   width: 50%;
   height: 100%;
   object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  object-position: center;
+  filter: brightness(0.75);
+  
 }
 
 .hero-img-left {
@@ -322,7 +390,7 @@ body {
     width:95%;
     max-width: 1370.5px;
     text-align: center;
-    padding: 2.5rem 1rem 2.5rem 1rem;
+    padding: 0.5rem 1rem 2.5rem 1rem;
     box-shadow: 0 4px 32px rgba(0,0,0,0.04);
 }
 
@@ -601,8 +669,9 @@ a {
 .process-section {
   background-image: url(/img/hero/img\ bg.png);
   padding: 6rem;
+  padding-top: 1rem;
   font-family: 'Poppins', Arial, sans-serif;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .process-container {
@@ -614,6 +683,7 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
 .main-heading {
@@ -651,7 +721,7 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   width: auto;
-  max-width: 1090px;
+  max-width: 1050px;
 }
 
 
@@ -661,7 +731,7 @@ a {
 
 .timeline-img,
 .timeline-content {
-  width: 48%;
+  width: 50%;
   
 }
 
@@ -787,7 +857,7 @@ a {
   overflow: hidden;
   color: #fff;
   text-align: left;
-  font-family: 'Poppins', Arial, sans-serif;
+
 }
 
 .service-hero-content {
@@ -821,14 +891,15 @@ a {
 
 /* Service Section */
 .services {
-  padding: 60px 0;
+  padding: 20px 0;
   background: #f9f9f9;
   text-align: center;
   font-family: 'Poppins', Arial, sans-serif;
+  background-image: url(/img/nav-logo/ChatGPT\ Image\ Jul\ 9\,\ 2025\,\ 10_51_47\ PM.png);
 }
 
 .section-title {
-  font-size: 32px;
+  font-size: 42px;
   margin-bottom: 40px;
 }
 
@@ -875,9 +946,11 @@ a {
 
 /* Expertise Section */
 .expertise {
-  padding: 60px 0;
+  padding: 30px 0;
   text-align: center;
   background: #fff;
+  background-image: url(/img/hero/img\ bg.png);
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
 .expertise-grid {
@@ -922,10 +995,12 @@ a {
 
 /* product */
 
+
+
 .product-section {
   padding: 1rem 2rem;
   font-family: 'Poppins', Arial, sans-serif;
-  background-image: url(img/hero/);
+  background-image: url(img/nav-logo/ChatGPT\ Image\ Jul\ 9\,\ 2025\,\ 10_51_47\ PM.png);
  
 }
 .container {
@@ -946,7 +1021,7 @@ a {
 }
 
 .box {
-  padding: 30px;
+  padding: 10px;
   border-radius: 10px;
   color: #111;
   font-size: 1rem;
@@ -1004,6 +1079,14 @@ h2 {
 
 .parties {
   grid-column: span 4;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+}
+.parties {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+}
+.parties {
+  grid-column: span 3;
   background: linear-gradient(135deg, #ffffff, #ffffff);
 }
 
@@ -1191,15 +1274,15 @@ h2 {
 .work-info-img img {
   width: 350px;
   height: 320px;
-  object-fit: cover;
+  object-fit:contain;
   border-radius: 16px;
   margin-bottom: 1rem;
-  background: #f7f8fa;
+  background: none;
 }
 
 .work-info-desc {
   color: #252525;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-align: center;
   margin-bottom: 1.2rem;
   background: #ffffff;

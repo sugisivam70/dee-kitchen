@@ -28,3 +28,25 @@
   });
 });
 
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.modern-nav-link[href^="#"]');
+
+function onScroll() {
+  let scrollPos = window.scrollY + 120; // Offset for sticky navbar
+  let currentId = '';
+  sections.forEach(section => {
+    if (scrollPos >= section.offsetTop) {
+      currentId = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (currentId && link.getAttribute('href') === '#' + currentId) {
+      link.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', onScroll);
+
+
