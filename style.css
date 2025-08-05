@@ -1223,10 +1223,16 @@ img
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 48px;
+  
   }
 
   .section-title {
     font-size: 24px;
+    
+  }
+
+  .service-hero-content h1{
+  letter-spacing: -0.06em; 
   }
 
   .service-box,
