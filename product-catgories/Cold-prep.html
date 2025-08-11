@@ -11,9 +11,9 @@
     <section class="product-category">
       <div class="category-nav">
         <button class="active">All</button>
+        <button>Ice Creame Machines</button>
         <button>Sugercan Machines</button>
         <button>Fruite Juiser</button>
-        <button>Ice Creame Machines</button>
         <button>Comercial Juiser</button>
         <button>Comercial Blender</button>
         <button>Water Cooler</button>
@@ -21,10 +21,68 @@
       </div>
 
       <div class="product-grid">
-        <div class="product-card" data-category="Sinks">
-          <img src="images/sink1.png" alt="Sink" />
-          <h4>Stainless Sink</h4>
-          <p>₹5,999</p>
+        <div class="product-card" data-category="Ice Creame Machines">
+          <div class="product-img-slider">
+            <img
+              src="cold-img/ice cream/Heavy duty ice/Heavy Duty Softy Ice Cream Machine (1).jpg"
+              alt="ice machine"
+              class="active"
+            />
+            <img
+              src="cold-img/ice cream/Heavy duty ice/Heavy Duty Softy Ice Cream Machine (2).jpg"
+              alt="ice machine 2"
+            />
+            <img
+              src="cold-img/ice cream/Heavy duty ice/Heavy Duty Softy Ice Cream Machine.jpg"
+              alt="ice machine 3"
+            />
+            <button class="prev-img">&#8592;</button>
+            <button class="next-img">&#8594;</button>
+          </div>
+          <h4>Heavy duty Ice creame machine</h4>
+          <p>₹1,20,000</p>
+        </div>
+        <div class="product-card" data-category="Ice Creame Machines">
+          <div class="product-img-slider">
+            <img
+              src="cold-img/ice cream/Heavy duty ice/Heavy Duty Softy Ice Cream Machine (1).jpg"
+              alt="ice machine"
+              class="active"
+            />
+            <img
+              src="cold-img/ice cream/Heavy duty ice/Heavy Duty Softy Ice Cream Machine (2).jpg"
+              alt="ice machine 2"
+            />
+            <img
+              src="cold-img/ice cream/Heavy duty ice/Heavy Duty Softy Ice Cream Machine.jpg"
+              alt="ice machine 3"
+            />
+            <button class="prev-img">&#8592;</button>
+            <button class="next-img">&#8594;</button>
+          </div>
+          <h4>Heavy duty Ice creame machine</h4>
+          <p>₹1,20,000</p>
+        </div>
+        <div class="product-card" data-category="Ice Creame Machines">
+          <div class="product-img-slider">
+            <img
+              src="cold-img/ice cream/Heavy duty ice/Heavy Duty Softy Ice Cream Machine (1).jpg"
+              alt="ice machine"
+              class="active"
+            />
+            <img
+              src="cold-img/ice cream/Heavy duty ice/Heavy Duty Softy Ice Cream Machine (2).jpg"
+              alt="ice machine 2"
+            />
+            <img
+              src="cold-img/ice cream/Heavy duty ice/Heavy Duty Softy Ice Cream Machine.jpg"
+              alt="ice machine 3"
+            />
+            <button class="prev-img">&#8592;</button>
+            <button class="next-img">&#8594;</button>
+          </div>
+          <h4>Heavy duty Ice creame machine</h4>
+          <p>₹1,20,000</p>
         </div>
         <div class="product-card" data-category="Hobs">
           <img src="images/hob1.png" alt="Gas Hob" />
@@ -163,6 +221,31 @@
 
       // Initial load
       showPage(1);
+
+      document
+        .querySelectorAll(".product-img-slider")
+        .forEach(function (slider) {
+          const imgs = slider.querySelectorAll("img");
+          let current = 0;
+          function showImg(idx) {
+            imgs.forEach((img, i) => img.classList.toggle("active", i === idx));
+          }
+          slider
+            .querySelector(".prev-img")
+            .addEventListener("click", function (e) {
+              e.stopPropagation();
+              current = (current - 1 + imgs.length) % imgs.length;
+              showImg(current);
+            });
+          slider
+            .querySelector(".next-img")
+            .addEventListener("click", function (e) {
+              e.stopPropagation();
+              current = (current + 1) % imgs.length;
+              showImg(current);
+            });
+          showImg(current);
+        });
     </script>
   </body>
 </html>

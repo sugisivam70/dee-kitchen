@@ -346,23 +346,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // ...other animation code...
 
-  // Why container fade-in from right on scroll
-  const whyContainer = document.querySelector(".why-container");
-  if (whyContainer) {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          whyContainer.classList.add("fade-in-right");
-        }
-      },
-      { threshold: 0.3 }
-    );
-    observer.observe(whyContainer);
-  }
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   // ...other animation code...
@@ -382,50 +366,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // ...other animation code...
 
-  // Expertise section fade-in from down on scroll
-  const expertiseSection = document.querySelector(".expertise");
-  if (expertiseSection) {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          expertiseSection.classList.add("fade-in-up");
-        }
-      },
-      { threshold: 0.3 }
-    );
-    observer.observe(expertiseSection);
-  }
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-  // ...other animation code...
-
-  // Timeline animation
-  const leftBlocks = document.querySelectorAll(".timeline-block-left");
-  const rightBlocks = document.querySelectorAll(".timeline-block");
-  const options = { threshold: 0.3 };
-
-  leftBlocks.forEach((block) => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        block.classList.add("fade-in-left");
-      }
-    }, options);
-    observer.observe(block);
-  });
-
-  rightBlocks.forEach((block) => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        block.classList.add("fade-in-right");
-      }
-    }, options);
-    observer.observe(block);
-  });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   // ...other animation code...

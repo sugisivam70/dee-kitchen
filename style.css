@@ -760,17 +760,7 @@ a {
   max-width: 1200px;
 }
 
-.why-container {
-  opacity: 0;
-  transform: translateX(60px);
-  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.why-container.fade-in-right {
-  opacity: 1;
-  transform: translateX(0);
-}
 
 .left-content {
   flex: 1 1 40%;
@@ -866,7 +856,7 @@ a {
 
 .info-cards {
   opacity: 0;
-  transform: translatey(60px);
+  transform: translatey(40px);
   transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
     transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -877,50 +867,10 @@ a {
 }
 /* ABOUT SECTION END */
 
-.expertise {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.expertise.fade-in-up {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* service */
 
 /* Timeline animation */
-.timeline-block-left,
-.timeline-block {
-  opacity: 0;
-  transform: translateX(0);
-  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.timeline-block-left.fade-in-left {
-  opacity: 1;
-  transform: translateX(0);
-  /* No bounce, stops at 0 */
-  transition-delay: 0.1s;
-}
-
-.timeline-block.fade-in-right {
-  opacity: 1;
-  transform: translateX(0);
-  /* No bounce, stops at 0 */
-  transition-delay: 0.1s;
-}
-
-/* Initial state for animation */
-.timeline-block-left {
-  transform: translateX(-60px);
-}
-.timeline-block {
-  transform: translateX(60px);
-}
 
 .process-section {
   background-image: url(/img/hero/img\ bg.png);
@@ -1251,24 +1201,7 @@ img .timeline-content {
 }
 
 /* product */
-.product-alt-btn {
-  display: flex;
-  background: #fafafa;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  color: #ff8400;
-  font-weight: 1000;
-  font-size: 2.1rem;
-  padding: 1rem 2.5rem;
-  border-radius: 14px;
-  text-decoration: none;
-  box-shadow: 0 8px 24px rgba(255, 107, 26, 0.1);
-  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
-  letter-spacing: 0.06em;
-  font-family: "Poppins", Arial, sans-serif;
-}
+
 .product-section {
   padding: 1rem 2rem;
   font-family: "Poppins", Arial, sans-serif;
@@ -1308,24 +1241,14 @@ img .timeline-content {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease;
 }
-.baking-box {
-  padding: 10px;
-  border-radius: 10px;
-  color: #111;
-  font-size: 1rem;
-  line-height: 1.6;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease;
-}
+
 .box h2 {
   color: #2d9cdb;
 }
 
 .box:hover {
   transform: translateY(-5px);
-}
-.baking-box:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -1353,12 +1276,7 @@ h2 {
   grid-column: span 2;
   background: linear-gradient(135deg, #ffffff, #ffffff);
 }
-
-.baking-box {
-  color: #2d9cdb;
-}
-
-.baking-box {
+.box.sports {
   grid-column: span 1;
   background: linear-gradient(135deg, #ffffff, #ffffff);
 }
@@ -1392,19 +1310,19 @@ h2 {
     align-items: stretch;
   }
 
+@media (max-width: 700px) {
   .container {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr; /* Show one box per row */
   }
-
-  .wedding,
-  .convocations,
-  .sports,
-  .tagline,
-  .parties {
-    grid-column: span 1;
+  .box,
+  .box.wedding,
+  .box.convocations,
+  .box.sports,
+  .box.tagline,
+  .box.parties {
+    grid-column: span 1 !important;
   }
-
+}
   h2 {
     font-size: 2rem;
     letter-spacing: 0.01em;
@@ -1525,6 +1443,45 @@ h2 {
   background: #222;
   color: #fff;
 }
+
+
+.product-img-slider {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-img-slider img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  left: 0; top: 0;
+  transition: opacity 0.4s;
+}
+.product-img-slider img.active {
+  display: block;
+  position: relative;
+  opacity: 1;
+}
+.product-img-slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.2em 0.6em;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.7;
+}
+.product-img-slider .prev-img { left: 8px; }
+.product-img-slider .next-img { right: 8px; }
 
 @media (max-width: 700px) {
   .product-grid {
