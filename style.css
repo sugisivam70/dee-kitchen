@@ -47,7 +47,6 @@ body {
   font-size: 1rem;
   color: #222;
   animation: fadeIn 0.18s;
-  
 }
 
 .nav-hover-group:hover .nav-hover-preview,
@@ -70,11 +69,12 @@ body {
  list-style: none;
   margin: 0 0 0 0;
   padding: 0;
-  display: flex;              /* Change from grid to flex */
-  flex-direction: row;        /* Horizontal direction */
+  display: flex;   
+  flex: auto;           /* Change from grid to flex */
+  
+      /* Horizontal direction */
   gap: 1.5rem;                /* Space between items */
-  justify-content: flex-start;
-  align-items: flex-start;/* row-gap and column-gap */
+
 }
 
 .nav-hover-preview li {
@@ -94,6 +94,10 @@ body {
     transform: none;
   }
 }
+
+
+
+
 .modern-navbar {
   position: fixed;
   top: 0;
